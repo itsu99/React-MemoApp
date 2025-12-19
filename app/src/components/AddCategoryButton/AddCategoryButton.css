@@ -1,0 +1,37 @@
+.add-category {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid #e5e7eb; /* 区切り線 */
+}
+
+.add-category input {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.add-category input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.add-category button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-category button:hover {
+  background-color: #2563eb;
+}
+
+.add-category button:active {
+  background-color: #1d4ed8;
+}

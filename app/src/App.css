@@ -1,0 +1,39 @@
+/* App.css */
+
+.app {
+  display: flex;               /* 横並びにする */
+  height: 100vh;               /* 画面全体に高さを広げる */
+  font-family: Arial, sans-serif;
+}
+
+/* 左側：カテゴリーリスト */
+.category-list {
+  flex: 1;                     /* 全体の1/3にするために比率指定 */
+  max-width: 60%;               /* 安全のため幅制限 */
+  border-right: 1px solid #ccc;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;            /* リストが長くなった場合スクロール */
+  background-color: #f9f9f9;
+}
+
+/* 右側：メモエディター */
+.memo-editor {
+  flex: 4;                     /* 残り2/3を使用 */
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.memo-editor textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

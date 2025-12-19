@@ -1,0 +1,37 @@
+/* MemoEditor.css */
+
+.memo-editor {
+  flex: 2; /* 左側CategoryListが1、右側MemoEditorが2くらいの比率 */
+  padding: 16px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc; /* 左との境界線 */
+  height: 100%; /* 親の高さに合わせる */
+  display: flex;
+  flex-direction: column;
+}
+
+.memo-editor p {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.memo-editor textarea {
+  flex: 1; /* 高さいっぱいに広げる */
+  width: 100%;
+  resize: none; /* リサイズ禁止、必要なら auto に */
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.memo-editor textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}

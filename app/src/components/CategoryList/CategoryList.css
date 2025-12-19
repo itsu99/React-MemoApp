@@ -1,0 +1,39 @@
+.category-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;              /* 左ペインの高さいっぱい */
+  width: 100%;
+  box-sizing: border-box;
+
+  border-right: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+/* カテゴリー一覧（スクロールする部分） */
+.category-list ul {
+  flex: 1;                   /* 残りの高さを全部使う */
+  overflow-y: auto;          /* ここだけスクロール */
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+/* 各カテゴリーの区切り線 */
+.category-list ul > li {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.category-list ul > li:last-child {
+  border-bottom: none;
+}
+
+/* 追加ボタン（下固定） */
+.category-list > :last-child {
+  height: 120px;              /* ← 好きな高さ */
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;       /* 中央揃え */
+  border-top: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
