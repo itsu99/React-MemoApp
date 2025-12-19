@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import './CategoryItem.css';
-import type { Category } from '../../types/category';
+import { useState } from "react";
+import "./CategoryItem.css";
+import type { Category } from "../../types/category";
 
 type Props = {
   category: Category;
@@ -9,7 +9,6 @@ type Props = {
   onUpdate: (id: number, name: string) => void;
   onDelete: (id: number) => void;
 };
-
 
 export const CategoryItem = ({
   category,
@@ -35,7 +34,7 @@ export const CategoryItem = ({
   };
 
   return (
-    <li className={`category-item ${isActive ? 'active' : ''}`}>
+    <li className={`category-item ${isActive ? "active" : ""}`}>
       {isEditing ? (
         <>
           <input
@@ -49,14 +48,11 @@ export const CategoryItem = ({
         </>
       ) : (
         <>
-          <span
-            className="category-name"
-            onClick={() => onSelect(category.id)}
-          >
+          <span className="category-name" onClick={() => onSelect(category.id)}>
             {category.name}
           </span>
-          <button onClick={() => setIsEditing(true)}>編集</button>
-          <button onClick={() => onDelete(category.id)}>削除</button>
+          <button onClick={() => setIsEditing(true)}>✏️</button>
+          <button onClick={() => onDelete(category.id)}>🗑️</button>
         </>
       )}
     </li>

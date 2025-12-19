@@ -1,9 +1,9 @@
 .category-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 4px;
+  gap: 10px;
+  padding: 15px 10px;
+  border-radius: 10px;
 }
 
 .category-item.active {
@@ -20,5 +20,19 @@
 }
 
 button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  color: #fff;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+button:active {
+  background-color: #1d4ed8;
 }
