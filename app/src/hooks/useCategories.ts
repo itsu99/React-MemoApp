@@ -3,7 +3,10 @@ import type { Category } from "../types/category";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const useCategories = () => {
-  const [categories, setCategories] = useLocalStorage<Category[]>("category",[]);
+  const [categories, setCategories] = useLocalStorage<Category[]>(
+    "category",
+    []
+  );
 
   const addCategory = useCallback((name: string) => {
     setCategories((prev) => {
@@ -16,7 +19,11 @@ export const useCategories = () => {
   }, []);
 
   const updateCategory = useCallback((id: number, name: string) => {
-    setCategories((prev) => prev.map((category) => category.id === id ? { ...category, name } : category));
+    setCategories((prev) =>
+      prev.map((category) =>
+        category.id === id ? { ...category, name } : category
+      )
+    );
   }, []);
 
   const deleteCategory = useCallback((id: number) => {
@@ -30,4 +37,3 @@ export const useCategories = () => {
     deleteCategory,
   } as const;
 };
-

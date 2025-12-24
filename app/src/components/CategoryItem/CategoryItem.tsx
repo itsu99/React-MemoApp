@@ -51,7 +51,7 @@ export const CategoryItem = ({
       ) : (
         <>
           <span className="category-name" onClick={() => onSelect(category.id)}>
-            {isOpen ? '▼' : '▶'}
+            {isOpen ? "▼" : "▶"}
             {category.name}
           </span>
           <button onClick={() => setIsEditing(true)}>✏️</button>

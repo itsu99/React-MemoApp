@@ -1,4 +1,4 @@
 export type Memo = {
-    title_id: number,
-    text: string
-}
+  title_id: number;
+  text: string;
+};

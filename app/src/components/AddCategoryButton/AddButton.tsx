@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import './AddButton.css';
+import { useState } from "react";
+import "./AddButton.css";
 
 type Props = {
   onAdd: (name: string) => void;
@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const AddButton = ({ onAdd, placeholder }: Props) => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const handleAdd = () => {
     // trim():前後の空白を削除
@@ -15,7 +15,7 @@ export const AddButton = ({ onAdd, placeholder }: Props) => {
     if (!trimmed) return;
 
     onAdd(trimmed);
-    setName('');
+    setName("");
   };
 
   return (
@@ -29,7 +29,7 @@ export const AddButton = ({ onAdd, placeholder }: Props) => {
         onChange={(e) => setName(e.target.value)}
         // Enter キーで追加できる UX
         onKeyDown={(e) => {
-          if (e.key === 'Enter') {
+          if (e.key === "Enter") {
             handleAdd();
           }
         }}
