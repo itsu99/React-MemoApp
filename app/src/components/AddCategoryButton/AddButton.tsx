@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import './AddCategoryButton.css';
+import './AddButton.css';
 
 type Props = {
   onAdd: (name: string) => void;
+  placeholder: string;
 };
 
-export const AddCategoryButton = ({ onAdd }: Props) => {
+export const AddButton = ({ onAdd, placeholder }: Props) => {
   const [name, setName] = useState('');
 
   const handleAdd = () => {
@@ -22,7 +23,7 @@ export const AddCategoryButton = ({ onAdd }: Props) => {
       <input
         type="text"
         value={name}
-        placeholder="カテゴリを追加"
+        placeholder={placeholder}
         // eはChangeEvent<HTMLInputElement>
         // e.target.value が入力値
         onChange={(e) => setName(e.target.value)}
