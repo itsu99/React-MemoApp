@@ -5,6 +5,7 @@ import type { Category } from "../../types/category";
 type Props = {
   category: Category;
   isActive: boolean;
+  isOpen: boolean;
   onSelect: (id: number) => void;
   onUpdate: (id: number, name: string) => void;
   onDelete: (id: number) => void;
@@ -13,6 +14,7 @@ type Props = {
 export const CategoryItem = ({
   category,
   isActive,
+  isOpen,
   onSelect,
   onUpdate,
   onDelete,
@@ -49,6 +51,7 @@ export const CategoryItem = ({
       ) : (
         <>
           <span className="category-name" onClick={() => onSelect(category.id)}>
+            {isOpen ? '▼' : '▶'}
             {category.name}
           </span>
           <button onClick={() => setIsEditing(true)}>✏️</button>
