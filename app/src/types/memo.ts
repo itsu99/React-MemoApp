@@ -1,4 +1,4 @@
 export type Memo = {
-    category_id: number,
+    title_id: number,
     text: string
 }

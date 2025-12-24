@@ -1,7 +1,7 @@
 import type { Category } from "../../types/category";
 import './CategoryList.css'
 import { CategoryItem } from "../CategoryItem/CategoryItem";
-import { AddCategoryButton } from "../AddCategoryButton/AddCategoryButton";
+import { AddButton } from "../AddCategoryButton/AddButton";
 
 type Props = {
     // 表示用データ
@@ -13,6 +13,8 @@ type Props = {
     onUpdate: (id: number, name: string) => void;
     onDelete: (id: number) => void;
 };
+
+const CATEGORY_PLACEHOLDER = 'カテゴリを追加';
 
 export const CategoryList = ({
     categories,
@@ -37,7 +39,7 @@ export const CategoryList = ({
                 ))}
             </ul>
 
-            <AddCategoryButton onAdd={onAdd} />
+            <AddButton onAdd={onAdd} placeholder={CATEGORY_PLACEHOLDER}/>
         </div>
     )
 }

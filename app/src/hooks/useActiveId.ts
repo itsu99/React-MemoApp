@@ -1,23 +1,23 @@
 import { useState, useCallback } from "react";
 
-export const useActiveCategory = (initialId: number | null = null) => {
+export const useActiveId = (initialId: number | null = null) => {
     
     // 今どのカテゴリーが選ばれているかを取得 
     const [activeId, setActiveId] = useState<number | null>(initialId);
 
     // カテゴリーをアクティブにする
-    const setActiveCategory = useCallback((id: number) => {
+    const markActiveId = useCallback((id: number) => {
         setActiveId(id);
     },[]);
 
     // アクティブを解除する
-    const clearActiveCategory = useCallback(() => {
+    const clearActiveId = useCallback(() => {
         setActiveId(null);
     },[]);
 
     return {
         activeId,
-        setActiveCategory,
-        clearActiveCategory,
+        markActiveId,
+        clearActiveId,
     } as const;
 };

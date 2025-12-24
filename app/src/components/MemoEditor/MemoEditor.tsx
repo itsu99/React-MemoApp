@@ -4,13 +4,13 @@ import './MemoEditor.css';
 
 type Props = {
     memo?: Memo | null;
-    activeCategoryId: number | null;
-    onUpdate: (categoryId: number, text: string) => void;
+    activeTitleId: number | null;
+    onUpdate: (activeTitleId: number, text: string) => void;
 }
 
 export const MemoEditor = ({
     memo,
-    activeCategoryId,
+    activeTitleId,
     onUpdate,
 }: Props) => {
     const [text, setText] = useState(memo?.text || "");
@@ -19,8 +19,8 @@ export const MemoEditor = ({
         const newText = e.target.value;
         setText(newText);
 
-        if (activeCategoryId !== null) {
-            onUpdate(activeCategoryId, newText)
+        if (activeTitleId !== null) {
+            onUpdate(activeTitleId, newText)
         }
     }
 
@@ -30,8 +30,8 @@ export const MemoEditor = ({
 
     return (
         <div className="memo-editor">
-            {activeCategoryId === null ? (
-                <p>カテゴリーを選択してください</p>
+            {activeTitleId === null ? (
+                <p>タイトルを選択してください</p>
             ): (
                 <textarea 
                     value={text}
