@@ -40,7 +40,7 @@ export const CategoryItem = ({
       {isEditing ? (
         <>
           <input
-            className="category-input"
+            className="bg-red-500"
             value={editName}
             onChange={(e) => setEditName(e.target.value)}
             autoFocus

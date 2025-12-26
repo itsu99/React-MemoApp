@@ -19,7 +19,7 @@ export const AddButton = ({ onAdd, placeholder }: Props) => {
   };
 
   return (
-    <div className="add-category">
+    <div className="bg-red-500 add-category">
       <input
         type="text"
         value={name}
